@@ -26,6 +26,11 @@ public class Main {
         String input =  keyboard.nextLine().toLowerCase();
 
         while(!input.equals("q")){
+            while(!input.equals("r") && !input.equals("s") && !input.equals("p")){
+                System.out.println("Input is invalid. Please Try again");
+                System.out.println("Enter r for Rock, p for Paper or s for Scissor. Enter q to quit.");
+                input =  keyboard.nextLine().toLowerCase();
+            }
             String computer = randomVal();
 
             if(input.equals(computer)){
